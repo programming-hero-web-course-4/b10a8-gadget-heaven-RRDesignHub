@@ -1,13 +1,14 @@
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import { MdOutlineLocalGroceryStore } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
 export default function Navbar() {
 
   return (
     <>
-      <div className="navbar ">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+      <div className="navbar fixed z-40 backdrop-blur bg-[#9538e233] md:px-10 lg:px-28">
+        <div className="navbar-start gap-2">
+          <div className="dropdown ">
+            <div tabIndex={0} role="button" className="btn bg-white w-14 p-0 lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -23,23 +24,24 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow gap-6">
-              <li className="text-center font-medium"><NavLink to='/'>Home</NavLink></li>
-              <li className="text-center font-medium"><NavLink>Statistics</NavLink></li>
-              <li className="text-center font-medium"><NavLink>Dashboard</NavLink></li>
+              className="menu menu-sm dropdown-content bg-base-100  text-dark-1 rounded-box z-[1] mt-3 p-2 shadow gap-4">
+              <li ><NavLink to='/' className="text-center  font-medium py-3 hover:underline">Home</NavLink></li>
+              <li ><NavLink to='/statistics' className="text-center font-medium py-3 hover:underline">Statistics</NavLink></li>
+              <li ><NavLink to='/dashboard' className="text-center font-medium py-3 hover:underline">Dashboard</NavLink></li>
             </ul>
           </div>
-          <a className=" text-xl">GadgetHub</a>
+          <Link to='/' className="font-bold text-xl text-white">GadgetHub</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-8">
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink>Statistics</NavLink></li>
-            <li><NavLink>Dashboard</NavLink></li>
+          <ul className="menu menu-horizontal text-white px-1 gap-8">
+            <li><NavLink to='/' className="text-center font-medium py-3 hover:underline">Home</NavLink></li>
+            <li><NavLink to='/statistics' className="text-center font-medium py-3 hover:underline">Statistics</NavLink></li>
+            <li><NavLink to='/dashboard' className="text-center font-medium py-3 hover:underline">Dashboard</NavLink></li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-4">
+          <Link className="w-10 h-10 bg-white rounded-full text-xl flex justify-center items-center text-dark-1"><MdOutlineLocalGroceryStore /></Link>
+          <Link className="w-10 h-10 bg-white rounded-full text-xl flex justify-center items-center text-dark-1"><FaRegHeart /></Link>
         </div>
       </div>
     </>
