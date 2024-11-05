@@ -1,0 +1,225 @@
+
+[
+    {
+        "product_id": "P001",
+        "product_title": "Anker PowerCore 20000",
+        "product_image": "https://i.ibb.co.com/m4zQYMV/Anker-powerbank.png",
+        "category": "Accessories",
+        "price": 49.99,
+        "description": "Portable charger with 20000mAh capacity and fast charging support.",
+        "Specification": [
+            "20000mAh capacity",
+            "USB-C and USB-A ports",
+            "Compact and lightweight design",
+            "Fast charging support"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "color": "Black"
+    },
+    {
+        "product_id": "P002",
+        "product_title": "BlackShark V2 Gaming Headset",
+        "product_image": "https://i.ibb.co.com/QjwYBLZ/Blackshark-headphone.png",
+        "category": "Accessories",
+        "price": 99.99,
+        "description": "Gaming headset with THX Spatial Audio and noise-canceling microphone.",
+        "Specification": [
+            "THX Spatial Audio",
+            "50mm drivers",
+            "Detachable noise-canceling microphone",
+            "USB sound card"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "color": "Black and Green"
+    },
+    {
+        "product_id": "P003",
+        "product_title": "JBL Charge 5",
+        "product_image": "https://i.ibb.co.com/jz0Zdrp/JBL-speaker.png",
+        "category": "Accessories",
+        "price": 179.99,
+        "description": "Portable waterproof Bluetooth speaker with powerful sound and long battery life.",
+        "Specification": [
+            "Waterproof (IP67)",
+            "20-hour battery life",
+            "Bluetooth 5.1",
+            "Powerbank feature"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "color": "Blue"
+    },
+    {
+        "product_id": "P004",
+        "product_title": "Microsoft Surface Laptop 5",
+        "product_image": "https://i.ibb.co.com/5RJHTY7/Microsoft-laotop.png",
+        "category": "Laptop",
+        "price": 999.99,
+        "description": "Versatile and elegant laptop with touchscreen and Dolby Atmos audio.",
+        "Specification": [
+            "Intel Core i5 12th Gen",
+            "13.5-inch PixelSense touchscreen",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "color": "Platinum"
+    },
+    {
+        "product_id": "P005",
+        "product_title": "HP Pavilion 11th Gen",
+        "product_image": "https://i.ibb.co.com/3pMJVVk/HP-11gen.png",
+        "category": "Laptop",
+        "price": 849.99,
+        "description": "Reliable and affordable laptop with Intel Core i5 11th Gen and FHD display.",
+        "Specification": [
+            "Intel Core i5 11th Gen",
+            "15.6-inch FHD display",
+            "8GB RAM",
+            "512GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "color": "Silver"
+    },
+    {
+        "product_id": "P006",
+        "product_title": "OnePlus 11 Pro",
+        "product_image": "https://i.ibb.co.com/Cn9rXrG/Oneplus-11.png",
+        "category": "Smartphone",
+        "price": 749.99,
+        "description": "High-performance smartphone with Snapdragon 8 Gen 2 and 120Hz AMOLED display.",
+        "Specification": [
+            "Snapdragon 8 Gen 2",
+            "6.7-inch AMOLED display",
+            "256GB storage",
+            "50MP main camera"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "color": "Titan Black"
+    },
+    {
+        "product_id": "P007",
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.ibb.co.com/4VYZnHS/Google-pixel-7.png",
+        "category": "Smartphone",
+        "price": 599.99,
+        "description": "Google's flagship phone with Tensor G2 chip and pure Android experience.",
+        "Specification": [
+            "Tensor G2 processor",
+            "6.3-inch OLED display",
+            "128GB storage",
+            "50MP dual rear camera"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "color": "Obsidian"
+    },
+    {
+        "product_id": "P008",
+        "product_title": "iPad Pro 11-inch",
+        "product_image": "https://i.ibb.co.com/pPHzrJD/iPad-pro.png",
+        "category": "Tablet",
+        "price": 799.99,
+        "description": "Powerful tablet with Apple M2 chip, ideal for creative professionals.",
+        "Specification": [
+            "Apple M2 chip",
+            "11-inch Liquid Retina display",
+            "128GB storage",
+            "12MP ultra-wide front camera"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "color": "Space Gray"
+    },
+    {
+        "product_id": "P009",
+        "product_title": "Logitech MX Master 3",
+        "product_image": "https://i.ibb.co.com/GH7d5nj/Logitech-MX-Master.png",
+        "category": "Accessories",
+        "price": 99.99,
+        "description": "Ergonomic wireless mouse with advanced scroll wheel and customizable buttons.",
+        "Specification": [
+            "4000 DPI sensor",
+            "Bluetooth & USB connectivity",
+            "Ergonomic design",
+            "Multi-device support"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "color": "Graphite"
+    },
+    {
+        "product_id": "P010",
+        "product_title": "Apple AirPods Pro (2nd Gen)",
+        "product_image": "https://i.ibb.co.com/VShB928/air-pod.png",
+        "category": "Accessories",
+        "price": 249.99,
+        "description": "Wireless noise-canceling earbuds with improved sound and battery life.",
+        "Specification": [
+            "Active Noise Cancellation",
+            "Transparency mode",
+            "MagSafe charging",
+            "6-hour battery life"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "color": "White"
+    },
+    {
+        "product_id": "P011",
+        "product_title": "Dell Inspiron 15",
+        "product_image": "https://i.ibb.co.com/Xp8G687/Dell-laptop.png",
+        "category": "Laptop",
+        "price": 749.99,
+        "description": "Affordable laptop with 11th Gen Intel Core i5 and FHD display.",
+        "Specification": [
+            "Intel Core i5 11th Gen",
+            "15.6-inch FHD display",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "color": "Platinum Silver"
+    },
+    {
+        "product_id": "P012",
+        "product_title": "iPhone 16 Pro",
+        "product_image": "https://i.ibb.co.com/znKRsXG/i-Phone-16-pro-max.png",
+        "category": "Smartphone",
+        "price": 1199.99,
+        "description": "The latest iPhone with A17 Bionic chip and advanced camera features.",
+        "Specification": [
+            "A17 Bionic chip",
+            "6.1-inch OLED display",
+            "128GB storage",
+            "Triple-camera system"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "color": "Graphite"
+    },
+    {
+        "product_id": "P013",
+        "product_title": "Samsung Galaxy S24 Ultra",
+        "product_image": "https://i.ibb.co.com/GcJ4H11/samsung-s24-ultra.png",
+        "category": "Smartphone",
+        "price": 1299.99,
+        "description": "Samsung's flagship phone with Exynos 2400, advanced camera, and S Pen support.",
+        "Specification": [
+            "Exynos 2400",
+            "6.8-inch Dynamic AMOLED display",
+            "256GB storage",
+            "200MP quad-camera system",
+            "S Pen included"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "color": "Phantom Black"
+    }
+]
