@@ -4,7 +4,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className='relative mb-80  '>
+      <div className='relative mb-48 md:mb-80  '>
         <div className="hero bg-gradient-to-b  from-[#9538e2] to-[#9b00c3] pt-20 md:pt-24 lg:pt-28 lg:px-40 rounded-3xl pb-40 lg:pb-52">
           <div className="hero-content text-center">
             <div className="">

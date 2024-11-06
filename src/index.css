@@ -8,17 +8,7 @@ body{
   background-color: #F6F6F6;
 }
 
-.active{
-  background: transparent !important;
-  color: white !important;
-  text-decoration: underline;
-}
 
-@media screen and (max-width: 475px) {
-  .active{
-    background: transparent !important;
-    color: #131313 !important;
-    text-decoration: underline;
-  }
-}
+
+
 

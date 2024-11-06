@@ -1,12 +1,14 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import SingleItemCard from "./SingleItemCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+
 import Unavailable from "./Unavailable";
 
 export default function ItemCards() {
   const {category} = useParams();
   const gadgetData = useLoaderData();
   const [filteredItems, setFitleredItem] = useState([]);
+
   
 
   useEffect(()=>{
@@ -27,6 +29,7 @@ export default function ItemCards() {
         </div> :
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {
+           
             filteredItems.map((SingleItem)=> <SingleItemCard key={SingleItem.product_id} singleItem={SingleItem}></SingleItemCard>)
           }
         </div>

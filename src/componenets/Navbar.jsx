@@ -5,7 +5,7 @@ export default function Navbar() {
  const location = useLocation()
   return (
     <>
-      <div className={`${location.pathname !== '/' ? 'h-[76px]' : ""}`}>
+      <div className={`${location.pathname === '/'  ? '' : "h-[76px]"}`}>
         <div className={`navbar fixed z-40  md:px-10 lg:px-28 ${location.pathname !== '/' ? 'bg-white ' : "backdrop-blur bg-[#9538e233]"}`}>
           <div className="navbar-start gap-2">
             <div className="dropdown ">
@@ -26,9 +26,9 @@ export default function Navbar() {
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100  text-dark-1 rounded-box z-[1] mt-3 p-2 shadow gap-4">
-                <li ><NavLink to='/' className={`text-center font-medium py-3 hover:underline ${location.pathname !== '/' ? 'text-dark-1' : ""}`}>Home</NavLink></li>
-                <li ><NavLink to='/statistics' className="text-center font-medium py-3 hover:underline">Statistics</NavLink></li>
-                <li ><NavLink to='/dashboard' className="text-center font-medium py-3 hover:underline">Dashboard</NavLink></li>
+                <li ><NavLink to='/' className={`text-center font-medium py-3 hover:underline text-dark-1`}>Home</NavLink></li>
+                <li ><NavLink to='/statistics' className="text-center font-medium py-3 hover:underline text-dark-1">Statistics</NavLink></li>
+                <li ><NavLink to='/dashboard' className="text-center font-medium py-3 hover:underline text-dark-1">Dashboard</NavLink></li>
               </ul>
             </div>
             <Link to='/' className={`font-bold text-xl  ${location.pathname !== '/' ? 'text-dark-1' : "text-white"}`}>GadgetHub</Link>

@@ -8,10 +8,12 @@ import Dashboard from './Pages/Dashboard';
 import Stats from './Pages/Stats';
 import ItemCards from './componenets/ItemCards';
 import SingleProductDetails from './Pages/SimgleProductDetails';
+import EnlistedItems from './componenets/EnlistedItems';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    loader: ()=> fetch('../gadgetData.json'),
     children: [
       {
         path: '/',
@@ -19,25 +21,37 @@ const router = createBrowserRouter([
         loader: ()=> fetch('../gadgetCategory.json'),
         children:[
           {
-            path: '/category/:category',
-            loader: ()=> fetch('../gadgetData.json'),
-            element: <ItemCards></ItemCards>,
+            path: '/', 
+            loader: () => fetch('../gadgetData.json'),
+            element: <ItemCards ></ItemCards>,
+          },
+          {
+              path: '/:category',
+              loader: ()=> fetch('../gadgetData.json'),
+              element: <ItemCards></ItemCards>,
           }
         ]
+      },
+      {
+        path: '/product/:product_id',
+        element: <SingleProductDetails></SingleProductDetails>,
+        loader: ()=> fetch('../gadgetData.json'),
       },
       { 
         path: '/dashboard',
         element: <Dashboard />,
+        children:[
+          {
+            path: '/dashboard/:addedItem', 
+            element: <EnlistedItems></EnlistedItems>,
+          }
+        ]
       },
       {
         path: '/statistics',
         element: <Stats></Stats>,
-      },
-      {
-        path: '/:product_id',
-        element: <SingleProductDetails></SingleProductDetails>,
-        loader: ()=> fetch('../gadgetData.json'),
       }
+      
     ]
   },
 ]);
