@@ -10,7 +10,7 @@ export default function Hero() {
             <div className="">
               <h1 className="text-3xl lg:text-5xl font-bold leading-tight text-white">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
               <p className="lg:px-28 py-4 lg:py-6 text-white font-light">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
-              <Link to='/dashboard' className=" bg-white text-xl font-bold text-[#9538e2] px-8 py-4 rounded-[32px]">Shop Now</Link>
+              <Link to='/dashboard/card' className=" bg-white text-xl font-bold text-[#9538e2] px-8 py-4 rounded-[32px]">Shop Now</Link>
             </div>
           </div>
           

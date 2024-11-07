@@ -28,21 +28,27 @@ export default function Navbar() {
                 className="menu menu-sm dropdown-content bg-base-100  text-dark-1 rounded-box z-[1] mt-3 p-2 shadow gap-4">
                 <li ><NavLink to='/' className={`text-center font-medium py-3 hover:underline text-dark-1`}>Home</NavLink></li>
                 <li ><NavLink to='/statistics' className="text-center font-medium py-3 hover:underline text-dark-1">Statistics</NavLink></li>
-                <li ><NavLink to='/dashboard' className="text-center font-medium py-3 hover:underline text-dark-1">Dashboard</NavLink></li>
+                <li ><NavLink to='/dashboard/card' className="text-center font-medium py-3 hover:underline text-dark-1">Dashboard</NavLink></li>
               </ul>
             </div>
-            <Link to='/' className={`font-bold text-xl  ${location.pathname !== '/' ? 'text-dark-1' : "text-white"}`}>GadgetHub</Link>
+            <Link to='/' className={`font-bold text-xl  ${location.pathname !== '/' ? 'text-dark-1' : "text-white"}`}>GadgetHeaven</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal text-white px-1 gap-8">
               <li><NavLink to='/' className={`text-center font-medium py-3 hover:underline ${location.pathname !== '/' ? 'text-dark-1' : "text-white"}`}>Home</NavLink></li>
               <li><NavLink to='/statistics' className={`text-center font-medium py-3 hover:underline ${location.pathname !== '/' ? 'text-dark-1' : "text-white"}`}>Statistics</NavLink></li>
-              <li><NavLink to='/dashboard' className={`text-center font-medium py-3 hover:underline ${location.pathname !== '/' ? 'text-dark-1' : "text-white"}`}>Dashboard</NavLink></li>
+              <li><NavLink to='/dashboard/card' className={`text-center font-medium py-3 hover:underline ${location.pathname !== '/' ? 'text-dark-1' : "text-white"}`}>Dashboard</NavLink></li>
             </ul>
           </div>
           <div className="navbar-end gap-4">
-            <Link className={`w-10 h-10 bg-white rounded-full text-xl flex justify-center items-center text-dark-1 ${location.pathname !== '/' ? 'border ' : "border-none"}`}><MdOutlineLocalGroceryStore /></Link>
-            <Link className={`w-10 h-10 bg-white rounded-full text-xl flex justify-center items-center text-dark-1 ${location.pathname !== '/' ? 'border ' : "border-none"}`}><FaRegHeart /></Link>
+            <NavLink 
+            to='/dashboard/card' 
+            className={`w-10 h-10  rounded-full text-xl flex justify-center items-center  ${location.pathname === '/' ? 'bg-white border text-dark-1' : ""} ${location.pathname === '/dashboard/card' ? 'bg-[#9b00c3] text-white' : "border"}`}
+            ><MdOutlineLocalGroceryStore /></NavLink>
+            <NavLink 
+            to='/dashboard/wishlist' 
+            className={`w-10 h-10 rounded-full text-xl flex justify-center items-center text-dark-1 ${location.pathname === '/' ? 'bg-white border text-dark-1' : ""} ${location.pathname === '/dashboard/wishlist' ? 'bg-[#9b00c3] text-white' : "border"}`}
+            ><FaRegHeart /></NavLink>
           </div>
         </div>
       </div>

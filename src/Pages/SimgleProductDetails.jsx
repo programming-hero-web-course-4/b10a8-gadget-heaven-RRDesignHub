@@ -2,17 +2,19 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { useAddedToCardItem } from "../layouts/Main";
-
+import { useAddedItemsPrice } from "../layouts/Main";
+import { useState } from "react";
 
 
 export default function SingleProductDetails() {
+  const [disabledBtn, setDisabledBtn] = useState(false);
   const gadgetData = useLoaderData();
   const {product_id} = useParams();
   const findProduct = gadgetData.find((product)=> product.product_id == product_id);
   const {product_title,  product_image, category, price, color ,description , Specification, rating, availability} = findProduct;
 
   const {sharedAddToCardFunction} = useAddedToCardItem();
-
+  const {totalPrice, setTotalPrice} = useAddedItemsPrice();
   
 
 
@@ -47,7 +49,8 @@ export default function SingleProductDetails() {
                   >Add To Card <MdOutlineLocalGroceryStore /></button>
 
                   <button
-                  onClick={()=>sharedAddToCardFunction("Wishlist",findProduct)} 
+                  disabled={disabledBtn}
+                  onClick={()=>sharedAddToCardFunction("Wishlist",findProduct, setDisabledBtn)} 
                   className={`w-10 h-10 bg-white rounded-full text-xl flex justify-center items-center text-dark-1 ${location.pathname !== '/' ? 'border ' : "border-none"}`}
                   ><FaRegHeart /></button>
                 </div>

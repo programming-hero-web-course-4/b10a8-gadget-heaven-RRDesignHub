@@ -9,11 +9,12 @@ import Stats from './Pages/Stats';
 import ItemCards from './componenets/ItemCards';
 import SingleProductDetails from './Pages/SimgleProductDetails';
 import EnlistedItems from './componenets/EnlistedItems';
+import ErrorPage from './Pages/ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    loader: ()=> fetch('../gadgetData.json'),
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',

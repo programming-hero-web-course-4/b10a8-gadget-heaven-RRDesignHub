@@ -1,3 +1,4 @@
+import { FaRegHeart } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
@@ -29,6 +30,7 @@ export default function Footer() {
             <a className="link link-hover text-[#09080F]">Cookie policy</a>
           </nav>
         </div>
+        <small className="flex justify-center items-center text-center mx-auto py-4 mt-4 w-full rounded-3xl bg-[#9c00c31a] ">Designed with <FaRegHeart className="text-[#9b00c3] text-xl"  /> by <a className="font-semibold" href="https://ripanulalam.netlify.app">Ripanul Alam</a>.</small>
       </footer>
     </>
   )

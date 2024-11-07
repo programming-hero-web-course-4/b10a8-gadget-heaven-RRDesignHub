@@ -1,7 +1,12 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-  
+import { useAddedItemsPrice } from "../layouts/Main";
 export default function Dashboard() {
   const location = useLocation();
+  
+  
+  const {totalPrice, handleSortListedItem} = useAddedItemsPrice();
+  
+  
   return (
     <>
       <div className="mb-10 md:mb-10">
@@ -30,14 +35,15 @@ export default function Dashboard() {
             </h2>
             <div className={`gap-4 items-center flex-col md:flex-row ${location.pathname === '/dashboard/card' ? 'flex' : "hidden"}`}>
               
-              <h2 className="text-2xl font-bold text-dark-1">Total Cost: $999</h2>
+              <h2 className="text-2xl font-bold text-dark-1">Total Cost: $ {parseFloat(totalPrice.toFixed(2))}k</h2>
               <div className="flex gap-4">
-                <Link 
+                <button 
+                onClick={handleSortListedItem}
                 className="text-[#9538e2] border py-3 px-8 border-[#9538e2] rounded-[32px] font-semibold text-lg"
-                >Sort By Price</Link>
-                <Link
+                >Sort By Price</button>
+                <button
                 className="text-white  py-3 px-8 bg-gradient-to-b  from-[#9538e2] to-[#9b00c3] rounded-[32px] font-semibold text-lg"
-                >Purchase</Link>
+                >Purchase</button>
               </div>
             </div>
         </div>
