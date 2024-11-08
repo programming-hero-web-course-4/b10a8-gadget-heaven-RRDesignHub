@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-[Visit the live site](https://gadget-hub.surge.sh/)
+[Visit the live site](https://tech-hubstore.netlify.app/)
 
 ## Project Documentation
 
