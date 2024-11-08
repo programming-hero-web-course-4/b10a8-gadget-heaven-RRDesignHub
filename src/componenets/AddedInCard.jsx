@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { useSetAddedItemDashboard, useRomovedItemsPrice } from "../layouts/Main";
+import { useSetAddedItemDashboard, useRomovedItemsByPuschase } from "../layouts/Main";
 import SingleATCItem from "./SingleATCItem";
 export default function AddedInCard(){
   const {addToCardItems, setUnsortedListedItem, sortedListedItem} = useSetAddedItemDashboard();
   const [uniqueItemsArr, setUniqueItemsArr] = useState([]);
-  const { setRemovedItemsPrice} = useRomovedItemsPrice();
-
+  
+   const {setRemovedItemPrice} = useRomovedItemsByPuschase();
   useEffect(()=>{
     const uniqueItems = [...addToCardItems].filter((item, ind, arr)=>arr.indexOf(item) === ind);
     setUniqueItemsArr(uniqueItems);
@@ -20,11 +20,18 @@ export default function AddedInCard(){
   },[addToCardItems, uniqueItemsArr])
 
   const handleRemoveItemBtn = (id, price)=>{
-    const remainingItems = uniqueItemsArr.filter(item=> item.product_id !== id);
+    setRemovedItemPrice(0);
+    let removedItemsPrice = 0;
+    const remainingItems = uniqueItemsArr.filter(item=>item.product_id !== id);
     setUniqueItemsArr(remainingItems);
-    setRemovedItemsPrice(price);
+    
+    const removedItems = uniqueItemsArr.filter(item=> item.product_id == id);
+    removedItems.map(item=> removedItemsPrice = item.price);
+    setRemovedItemPrice(removedItemsPrice);
   }
-
+  
+  
+  
   return(
     <>
       <div className="flex flex-col gap-4 mx-5 md:mx-20">

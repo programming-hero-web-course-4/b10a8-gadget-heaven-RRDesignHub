@@ -34,7 +34,9 @@ export default function SingleWLI({item, handleRemoveItemBtn}){
           <button onClick={()=>handleRemoveItemBtn(product_id)} className="text-red-500 text-5xl"><TiDelete /></button>
         </div>
       </div>
-      
+      <div>
+        <h3>Rating: {rating}</h3>
+      </div>
     </div>
     </>
   )

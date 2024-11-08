@@ -26,14 +26,19 @@ export const RomovedItemsPrice = createContext();
 export const useRomovedItemsPrice = ()=> useContext(RomovedItemsPrice);
 
 
+//removed items by clicking puschase btn context api
+export const RomovedItemsByPuschase = createContext();
+export const useRomovedItemsByPuschase = ()=> useContext(RomovedItemsByPuschase);
+
 export default function Main() {
   const [addToCardItems, setAddToCardItems] = useState([]);
   const [addToWishlists, setAddToWishlists] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [addedItmeQuentity, setAddedItmeQuentity] = useState(0);
-  const [removedItemsPrice, setRemovedItemsPrice] = useState(0);
+  const [removedItems, setRemovedItems] = useState([]);
   const [unsortedListedItem, setUnsortedListedItem] = useState([]);
   const [sortedListedItem, setSortedListedItem] = useState([]);
+  const [removedItemPrice, setRemovedItemPrice] = useState(0);
   const sharedAddToCardFunction = (type,item, setDisabledBtn) => {
     if(type === "Add To Card"){
       setAddToCardItems([...addToCardItems, item]);
@@ -65,18 +70,21 @@ export default function Main() {
     }
   };
 
-useEffect(()=>{
-  setTotalPrice(totalPrice - removedItemsPrice);
-  setRemovedItemsPrice(0);
-  
-},[removedItemsPrice])
-
 const handleSortListedItem = ()=>{
   const decendingSrted = unsortedListedItem.sort((a, b)=> b.price - a.price);
   setSortedListedItem(decendingSrted);
 } 
 
 
+const handleClearAllListedItems = (setIsDisabled)=>{
+  setTotalPrice(0)
+  setAddToCardItems([]);
+  setIsDisabled(true);
+}
+
+useEffect(()=>{
+  setTotalPrice(totalPrice - removedItemPrice);
+},[removedItemPrice])
 
 
   
@@ -86,7 +94,8 @@ const handleSortListedItem = ()=>{
         <SetAddedItemDashboard.Provider value={{addToCardItems,setUnsortedListedItem, sortedListedItem, addToWishlists}}>
           <AddedItemsPrice.Provider value={{totalPrice, setTotalPrice, handleSortListedItem}}>
             <QountAddedItem.Provider value={{addedItmeQuentity, setAddedItmeQuentity}}>
-              <RomovedItemsPrice.Provider value={{removedItemsPrice, setRemovedItemsPrice}}>
+              <RomovedItemsPrice.Provider value={{removedItems, setRemovedItems}}>
+                <RomovedItemsByPuschase.Provider value={{ handleClearAllListedItems, setRemovedItemPrice}}>
                 {/* Navbar */}
                 <Navbar></Navbar>
 
@@ -109,6 +118,7 @@ const handleSortListedItem = ()=>{
                   pauseOnHover
                   theme="colored"
                   />
+                  </RomovedItemsByPuschase.Provider>
               </RomovedItemsPrice.Provider>
             </QountAddedItem.Provider>
           </AddedItemsPrice.Provider>

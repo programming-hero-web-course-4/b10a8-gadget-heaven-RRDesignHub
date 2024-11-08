@@ -32,7 +32,7 @@ export default function SingleATCItem({item, handleRemoveItemBtn}){
         </div>
         <div className="flex  items-center  gap-5">
           <h4 className="text-xl font-semibold text-[#09080fcb]">Price: $ {price}k</h4>
-          <button onClick={()=>handleRemoveItemBtn(product_id, price*addedItmeQuentity)} className="text-red-500 text-5xl"><TiDelete /></button>
+          <button onClick={()=>handleRemoveItemBtn(product_id, price)} className="text-red-500 text-5xl"><TiDelete /></button>
         </div>
       </div>
       

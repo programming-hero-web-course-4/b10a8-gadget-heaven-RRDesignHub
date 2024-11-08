@@ -1,11 +1,12 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { useAddedItemsPrice } from "../layouts/Main";
+import { useAddedItemsPrice, useRomovedItemsByPuschase } from "../layouts/Main";
+import { useState } from "react";
 export default function Dashboard() {
   const location = useLocation();
   
-  
+  const {purshasedItemClear, handleClearAllListedItems} = useRomovedItemsByPuschase();
   const {totalPrice, handleSortListedItem} = useAddedItemsPrice();
-  
+  const [isDisabled, setIsDisabled] = useState(false);
   
   return (
     <>
@@ -42,6 +43,8 @@ export default function Dashboard() {
                 className="text-[#9538e2] border py-3 px-8 border-[#9538e2] rounded-[32px] font-semibold text-lg"
                 >Sort By Price</button>
                 <button
+                disabled={isDisabled}
+                  onClick={()=>handleClearAllListedItems(setIsDisabled)}
                 className="text-white  py-3 px-8 bg-gradient-to-b  from-[#9538e2] to-[#9b00c3] rounded-[32px] font-semibold text-lg"
                 >Purchase</button>
               </div>
