@@ -8,7 +8,7 @@
 
 ## Project Documentation
 
-For more details on project requirements and functionality, please refer to the [Requirement Document](./Project-requirement.pdf) located in the root folder.
+For more details on project requirements and functionality, please refer to the [Requirement Document](./public/Project-requirement.pdf) located in the root folder.
 
 ## Key Features
 
